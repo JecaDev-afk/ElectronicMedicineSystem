@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація пацієнта - e-Health Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">🏥 e-Health Portal</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="appointment.html">Запис на прийом</a></li>
+                <li><a href="history.html">Історія</a></li>
+                <li><a href="communication.html">Повідомлення</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Реєстрація нового пацієнта</h1>
+
+        <div id="alert-container"></div>
+
+        <div class="card">
+            <form id="registration-form">
+                <h2>Особиста інформація</h2>
+                
+                <div class="form-group">
+                    <label for="first_name">Ім'я *</label>
+                    <input type="text" id="first_name" name="first_name" required 
+                           placeholder="Введіть ваше ім'я">
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Прізвище *</label>
+                    <input type="text" id="last_name" name="last_name" required 
+                           placeholder="Введіть ваше прізвище">
+                </div>
+
+                <div class="form-group">
+                    <label for="date_of_birth">Дата народження *</label>
+                    <input type="date" id="date_of_birth" name="date_of_birth" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" 
+                           placeholder="+380501234567" pattern="[+]?[0-9]{10,13}">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта</label>
+                    <input type="email" id="email" name="email" 
+                           placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адреса</label>
+                    <textarea id="address" name="address" rows="3" 
+                              placeholder="Введіть вашу адресу проживання"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                <a href="index.html" class="btn btn-secondary" style="margin-left: 1rem;">Скасувати</a>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Інформація</h2>
+            <p>Після реєстрації ви отримаєте унікальний ID пацієнта, який потрібно буде використовувати для запису на прийом та перегляду медичної історії.</p>
+            <p><strong>Примітка:</strong> Поля, позначені зірочкою (*), є обов'язковими для заповнення.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 e-Health Portal. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="registration.js"></script>
+</body>
+</html>
+

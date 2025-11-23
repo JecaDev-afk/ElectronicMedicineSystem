@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медична історія - e-Health Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">🏥 e-Health Portal</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="appointment.html">Запис на прийом</a></li>
+                <li><a href="history.html">Історія</a></li>
+                <li><a href="communication.html">Повідомлення</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Медична історія</h1>
+
+        <div class="card">
+            <h2>Перегляд записів</h2>
+            <div class="form-group">
+                <label for="patient-id-input">ID Пацієнта</label>
+                <input type="number" id="patient-id-input" placeholder="Введіть ID пацієнта">
+                <button id="load-records-btn" class="btn btn-primary" style="margin-top: 1rem;">Завантажити записи</button>
+            </div>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div id="records-container">
+            <!-- Медичні записи та рецепти будуть відображені тут -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 e-Health Portal. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="history.js"></script>
+</body>
+</html>
+

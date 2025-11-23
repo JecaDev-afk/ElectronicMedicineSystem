@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис на прийом - e-Health Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">🏥 e-Health Portal</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="appointment.html">Запис на прийом</a></li>
+                <li><a href="history.html">Історія</a></li>
+                <li><a href="communication.html">Повідомлення</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Запис на прийом до лікаря</h1>
+
+        <div id="alert-container"></div>
+
+        <div class="card">
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="patient_id">ID Пацієнта *</label>
+                    <input type="number" id="patient_id" name="patient_id" required 
+                           placeholder="Введіть ваш ID пацієнта">
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor_id">ID Лікаря *</label>
+                    <input type="number" id="doctor_id" name="doctor_id" required 
+                           placeholder="Введіть ID лікаря">
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment_date">Дата та час прийому *</label>
+                    <input type="datetime-local" id="appointment_date" name="appointment_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment_type">Тип прийому</label>
+                    <select id="appointment_type" name="appointment_type">
+                        <option value="">Оберіть тип</option>
+                        <option value="консультація">Консультація</option>
+                        <option value="огляд">Огляд</option>
+                        <option value="лабораторні аналізи">Лабораторні аналізи</option>
+                        <option value="профілактичний огляд">Профілактичний огляд</option>
+                        <option value="екстрений">Екстрений</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Примітки</label>
+                    <textarea id="notes" name="notes" 
+                              placeholder="Додайте будь-які додаткові примітки або симптоми..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Записатися на прийом</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Інформація</h2>
+            <p>Після заповнення форми ваш запис буде збережено в системі. Ви отримаєте підтвердження на вказану електронну пошту.</p>
+            <p><strong>Примітка:</strong> Для тестування використовуйте існуючі ID пацієнтів та лікарів з бази даних.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 e-Health Portal. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="appointment.js"></script>
+</body>
+</html>
+
